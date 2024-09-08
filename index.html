@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Form</title>
+  <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Unique Path and Shareable Link</h1>
+        <form id="createResume">
+            <fieldset>
+
+                <legend>Personal Info</legend>
+
+                <label for="username">RESUME URL:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <lable for="name">Name:</lable>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required><br>
+
+                <label for="contact">Contact:</label>
+                <input type="number" id="contact" name="contact" required><br>
+
+                <label for="socialMedia">Websites Links:</label>
+                <input type="text" id="socialMedia" name="socialMedia" required>
+
+                <label for="profilePicture">Resume</label>
+                <input type="text" id="profilePicture" name="profilePicture" accept="image/*"></input>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <label for="qualification">Qualification:</label>
+                <input type="text" id="qualification" name="qualification" required><br>
+                <label for="field">Field:</label>
+                <input type="text" id="field" name="field" required>
+            </fieldset>
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="experience" rows="2" required></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">Top Skills:</label>
+                <textarea id="skills" name="skills" required></textarea>
+            </fieldset>
+            <button type="submit">Create Your Resume</button>
+        </form>
+
+<div id="resumeOutput"></div>
+<script src="script.js"></script>
+<button type="button" id="sharebtn">Share</button>
+<style>
+    #sharebtn {
+        width:80px;
+        height: 30px;
+        border :none;
+        border-radius: 5px;
+        background-color: rgba(255, 99, 71, 0.6);
+        color:#000;
+        font-size: 17px;
+        text-align: center;
+    }
+</style>
+<script>
+  const sharebtn =  document.querySelector('#sharebtn');
+  sharebtn.addEventListener("click", (event)=>{
+    if(navigator.share){
+        navigator.share({
+            title:"Resume",
+            url:"https://www.google.com",
+        }).then(()=>{
+            console.log("Thanks for sharing");
+        }).catch((err)=>{
+            console.log("Error sharing");
+            console.log(err);
+        })
+    }else{
+        alert("Sharing is not supported on this browser.");
+    }
+  })
+</script>
+    </body>
+</html>

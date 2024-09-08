@@ -1,0 +1,72 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 0%;
+    background-color: #fff;   
+}
+h1 {
+    text-align: center;
+    color:#000;
+}
+form {
+    max-width: 600px;
+    margin:auto;
+    background-color: rgba(255, 99, 71, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 1);
+    padding: 20px;
+}
+fieldset {
+    border:2px solid #000;
+    border-radius: 8px;
+    padding:20px;
+    margin-bottom:20px;
+    background-color: #fff;
+}
+legend {
+    font-weight: bold;
+    text-align:left;
+    color:#000;
+
+}
+label {
+    display:block;
+    margin-top: 10px;
+    color: #000;
+}
+input,textarea {
+    width: calc(100% - 1px);
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #000;
+    border-radius : 4px;
+    box-sizing: border-box;
+}
+button {
+    display: block;
+    padding: 10px 20px;
+    background-color: rgba(255, 99, 71, 0.6);
+    color: #000;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    margin:20px auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+button:hover{
+    background-color: blanchedalmond;
+}
+
+#reusmeOutput {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: rgba(255, 99, 71, 0.6);
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 1);
+}
+
+#resumeOutput h2 {
+    color: #000;
+}
