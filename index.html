@@ -1,90 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume Form</title>
-  <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
-        <h1>Unique Path and Shareable Link</h1>
-        <form id="createResume">
-            <fieldset>
 
-                <legend>Personal Info</legend>
+        <nav class = "navbar bg-white">
+            <div class="container">
+                <div class = "navbar-content">
+                    <div class = "brand-and-toggler">
+                        <a href = "index.html" class = "navbar-brand">
+                            <img src = "assets/images/curriculum-vitae.png" alt = "" class = "navbar-brand-icon">
+                            <span class = "navbar-brand-text">CV Genie</span>
+                        </a>
+                        <button type = "button" class = "navbar-toggler-btn">
+                            <div class = "bars">
+                                <div class = "bar"></div>
+                                <div class = "bar"></div>
+                                <div class = "bar"></div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-                <label for="username">RESUME URL:</label>
-                <input type="text" id="username" name="username" required><br>
+        <header class = "header bg-bright" id = "header">
+            <div class = "container">
+                <div class = "header-content text-center">
+                    <h6 class="text-uppercase text-blue-dark fs-14 fw-6 ls-1">Professional Online Resume Builder</h6>
+                    <h1 class="lg-title">Stand Out – Join the Top 2% with Your Resume</h1>
+                    <p class="text-dark fs-18">Create a winning resume with expertly designed templates that meet industry standards. Fast, easy, and tailored for success – start building your future today for free!</p>
+                    <a href="resume.html" class="btn btn-primary text-uppercase">Build My Resume</a>
+                    
+                   
+                </div>
+            </div>
+        </header>
 
-                <lable for="name">Name:</lable>
-                <input type="text" id="name" name="name" required><br>
+      
 
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required><br>
-
-                <label for="contact">Contact:</label>
-                <input type="number" id="contact" name="contact" required><br>
-
-                <label for="socialMedia">Websites Links:</label>
-                <input type="text" id="socialMedia" name="socialMedia" required>
-
-                <label for="profilePicture">Resume</label>
-                <input type="text" id="profilePicture" name="profilePicture" accept="image/*"></input>
-
-            </fieldset>
-
-            <fieldset>
-                <legend>Education</legend>
-                <label for="qualification">Qualification:</label>
-                <input type="text" id="qualification" name="qualification" required><br>
-                <label for="field">Field:</label>
-                <input type="text" id="field" name="field" required>
-            </fieldset>
-            <fieldset>
-                <legend>Work Experience</legend>
-                <label for="experience">Experience:</label>
-                <textarea id="experience" name="experience" rows="2" required></textarea>
-            </fieldset>
-            <fieldset>
-                <legend>Skills</legend>
-                <label for="skills">Top Skills:</label>
-                <textarea id="skills" name="skills" required></textarea>
-            </fieldset>
-            <button type="submit">Create Your Resume</button>
-        </form>
-
-<div id="resumeOutput"></div>
-<script src="script.js"></script>
-<button type="button" id="sharebtn">Share</button>
-<style>
-    #sharebtn {
-        width:80px;
-        height: 30px;
-        border :none;
-        border-radius: 5px;
-        background-color: rgba(255, 99, 71, 0.6);
-        color:#000;
-        font-size: 17px;
-        text-align: center;
-    }
-</style>
-<script>
-  const sharebtn =  document.querySelector('#sharebtn');
-  sharebtn.addEventListener("click", (event)=>{
-    if(navigator.share){
-        navigator.share({
-            title:"Resume",
-            url:"https://www.google.com",
-        }).then(()=>{
-            console.log("Thanks for sharing");
-        }).catch((err)=>{
-            console.log("Error sharing");
-            console.log(err);
-        })
-    }else{
-        alert("Sharing is not supported on this browser.");
-    }
-  })
-</script>
+        <footer class = "footer bg-dark">
+            <div class="container">
+                <div class = "footer-content text-center">
+                    <p class="fs-15">&copy;Copyright 2024. All Rights Reserved - <span>CV Genie</span> Made By Mahnoor Tahir</p>
+                </div>
+            </div>
+        </footer>
+        
     </body>
 </html>
